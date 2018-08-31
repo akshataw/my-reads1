@@ -74,7 +74,7 @@ These books do not know which shelf they are on. They are raw results only. You'
 
  Getting Started :-
 
-  Run git clone https://github.com/akshataw/my-reads.git to clone this repository
+  Run git clone https://github.com/akshataw/my-reads1.git to clone this repository
  cd my-reads 
  then run npm install
  then npm start to start the app then navigate to http://localhost:3000/ on your local machine
