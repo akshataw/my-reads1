@@ -8,7 +8,6 @@ export default class BookList extends React.Component{
   static propTypes ={
   books: PropTypes.arrayOf(PropTypes.shape({
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
   shelf: PropTypes.string.isRequired,
   imageLinks: PropTypes.object.isRequired,
   id: PropTypes.string.isRequired})),

@@ -10,7 +10,7 @@ export default class App extends Component {
     books : []
   }
 
-ComponentDidMount(){
+componentDidMount(){
   this.fetchBooks()
 }
 

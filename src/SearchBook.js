@@ -3,11 +3,14 @@ import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 import BookShelf from './BookShelf';
 import * as BooksAPI from './BooksAPI';
+import PageNotFound from './PageNotFound';
+//import { DebounceInput } from 'throttle-debounce';
 
-export default class SearchBook extends React.Component{
+class SearchBook extends React.Component{
   state = {
     books : [],
-    query : ''
+    query : '',
+    displayResult : false
   }
 
   static propTypes = {
@@ -47,17 +50,21 @@ searchData = (value) => {
         books = books.filter((book) =>book.imageLinks)
          books = this.mergeArr(books,this.props.myBooks)
         this.setState({books})
+        this.setState.displayResult = true
       }
       else{
         this.setState({books: []})
+        this.setState.displayResult = false
       }
     })
 }
   else if(value === undefined){
     this.setState({books: [], query: 'No Results Found'})
+    this.setState.displayResult = false
   }
   else{
     this.setState({books: [], query: ''})
+    this.setState.displayResult = false
   }
 }
 
@@ -85,7 +92,12 @@ searchData = (value) => {
         {this.state.query !== '' && books.length > 0 && (<BookShelf title="Search Results" books={books} onShelfChange={(id, shelf) => {
           this.props.onShelfChange(id, shelf)
         }} />)}
+        <div>
+        {this.state.query !== '' && !this.setState.displayResult && <p>Books Not Found!</p>}
+        </div>
       </div>
     )
   }
 }
+
+export default SearchBook;

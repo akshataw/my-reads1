@@ -24,7 +24,7 @@ export default class Book extends React.Component{
             <div className="cover" style={{
                 width: 120,
                 height: 200,
-                backgroundImage: `url("${imageURL}")`
+                backgroundImage: imageURL ? (`url(${imageURL})`) : (`url(https://dummyimage.com/128x170/4f4f4f/ffffff.jpg&text=No+Book+Art)`)
               }}></div>
             <div className="book-shelf-changer">
               <select onChange={this.changeShelf} value={this.props.shelf}>
@@ -32,7 +32,7 @@ export default class Book extends React.Component{
                 <option value="currentlyReading">Currently Reading</option>
                 <option value="wantToRead">Want to Read</option>
                 <option value="read">Read</option>
-                <option value="none">None</option>
+                <option value="none" selected>None</option>
               </select>
             </div>
           </div>
