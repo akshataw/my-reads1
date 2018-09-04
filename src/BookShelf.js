@@ -16,6 +16,7 @@ export default class BookShelf extends Component {
       <div className="bookshelf">
         <h2 className="bookshelf-title">{this.props.title}</h2>
         <div className="bookshelf-books">
+         {books.length > 0 ? (
           <ol className="books-grid">
              {books.map((book, index)=>(
               <Book
@@ -29,7 +30,10 @@ export default class BookShelf extends Component {
                 }}
               />
             ))}
-          </ol>
+          </ol>) : (
+           <div>
+            <p>Books Not Found!</p>
+           </div>)}
         </div>
       </div>
     )
