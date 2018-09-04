@@ -1,25 +1,36 @@
 
 MyReads Project
 
-
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
-
-Of course, you are free to start this project from scratch if you wish! Just be sure to use Create React App to bootstrap the project.
-
-TL;DR
-
 To get started developing right away:
 
-install all project dependencies with npm install
+Install all project dependencies with npm install
 start the development server with npm start
+
+Installation and Launch :-
+
+   To install the application clone this git repository
+  $ git clone https://github.com/akshataw/my-reads1.git 
+   
+  $ cd myreads
+
+Install dependencies using npm command line tool
+  $ npm install
+
+Run the application, again using npm
+  $ npm start
+
 
 What You're Getting
 ├── README.md :- This file.
+|
 ├── SEARCH_TERMS.md :- The short collection of available search terms for you to use with your app.
+|
 ├── package.json :- npm package manager file. It's unlikely that you'll need to modify this.
+|
 ├── public :-
 │   ├── favicon.ico :- React Icon, You may change if you wish.
-│   └── index.html :- It consist of HTML code.DO NOT MODIFY
+|   └── index.html :- It consist of HTML code.DO NOT MODIFY
+|
 └── src :-
     ├── App.css :- Styles for the app. Feel free to customize this as you desire.
     ├── App.js :- This is the root of your app. Contains static HTML right now.
@@ -33,49 +44,43 @@ What You're Getting
     └── index.js :- You should not need to modify this file. It is used for DOM rendering only.
 
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+   Backend Server :-
 
-Backend Server :-
-
-To simplify your development process, we've provided a backend server for you to develop against. The provided file BooksAPI.js contains the methods you will need to perform necessary operations on the backend:
+   To simplify your development process, we've a backend server for us to develop against. The file BooksAPI.js contains the methods we will need to perform necessary operations on the backend:
  
- 1)getAll
- 2)update
- 3)search
+       1)getAll
+       2)update
+       3)search
 
- 1) getAll :-
- Method Signature:
+     1) getAll :-
 
- getAll() :
-   Returns a Promise which resolves to a JSON object containing a collection of book objects.
-This collection represents the books currently in the bookshelves in your app.
+     Method Signature:
 
-
- 2) update :-
- Method Signature:
-
- update(book, shelf) : 
-   book: <Object> containing at minimum an id attribute
-   shelf: <String> contains one of ["wantToRead", "currentlyReading", "read"]
-    Returns a Promise which resolves to a JSON object containing the response data of the POST request.
-  3) search :-
- Method Signature:
-
- search(query) :
-   query: <String>
-    Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+       getAll() :
+         Returns a Promise which resolves to a JSON object containing a collection of book objects. This collection represents the books currently in the bookshelves in our app.
 
 
-  Important :-
+    2) update :-
 
-   The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in SEARCH_TERMS.md. That list of terms are the only terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+     Method Signature:
+
+       update(book, shelf) : 
+           book: <Object> containing at minimum an id attribute
+           shelf: <String> contains one of ["wantToRead", "currentlyReading", "read"]
+              Returns a Promise which resolves to a JSON object containing the response data of the POST request.
+ 
+    3) search :-
+   
+     Method Signature:
+
+        search(query) :
+        query: <String>
+              Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
+
+ 
+   Important :-
+
+     The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in SEARCH_TERMS.md. That list of terms are the only terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
 
- Getting Started :-
-
-  Run git clone https://github.com/akshataw/my-reads1.git to clone this repository
- cd my-reads 
- then run npm install
- then npm start to start the app then navigate to http://localhost:3000/ on your local machine
-  
+   
